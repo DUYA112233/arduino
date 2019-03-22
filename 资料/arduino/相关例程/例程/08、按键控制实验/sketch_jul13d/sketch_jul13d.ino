@@ -1,0 +1,14 @@
+int pushButton = 7;
+int led = 10;
+void setup() {
+  Serial.begin(9600);
+  pinMode(pushButton, INPUT);
+  pinMode(led, OUTPUT);
+}
+void loop() 
+{
+  int buttonState = digitalRead(pushButton);
+  digitalWrite(led, buttonState);
+  Serial.println(buttonState);
+  delay(10);
+  }
